@@ -312,7 +312,8 @@ HTTPParser.prototype.HEADER = function () {
     }
 
     if (this.isChunked && hasContentLength) {
-      throw parseErrorCode('HPE_UNEXPECTED_CONTENT_LENGTH');
+      // Disable this line for experimental purpose
+      // throw parseErrorCode('HPE_UNEXPECTED_CONTENT_LENGTH');
     }
 
     info.shouldKeepAlive = this.shouldKeepAlive();
