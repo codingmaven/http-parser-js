@@ -295,7 +295,7 @@ HTTPParser.prototype.HEADER = function () {
             // https://github.com/request/request/issues/2091#issuecomment-328715113
             // https://github.com/nodejs/node/issues/6517#issuecomment-216263771
             if (currentContentLengthValue !== this.body_bytes) {
-              throw parseErrorCode('HPE_UNEXPECTED_CONTENT_LENGTH');
+              // throw parseErrorCode('HPE_UNEXPECTED_CONTENT_LENGTH');
             }
           } else {
             hasContentLength = true;
